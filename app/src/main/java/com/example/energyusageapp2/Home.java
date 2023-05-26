@@ -98,6 +98,11 @@ public class Home extends Fragment {
         };
 
         imageResourceID = new int[]{
+                R.drawable.a,
+                R.drawable.a,
+                R.drawable.a,
+                R.drawable.a,
+
 
         };
 
