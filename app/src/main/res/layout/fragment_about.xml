@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".About">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/about_team"
         android:layout_width="wrap_content"
