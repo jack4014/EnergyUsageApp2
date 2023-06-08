@@ -1,5 +1,6 @@
 package com.example.energyusageapp2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  * Use the {@link Home#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Home extends Fragment {
+public class Home extends Fragment implements RecyclerViewInterface {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -81,7 +82,7 @@ public class Home extends Fragment {
         recyclerview = view.findViewById(R.id.recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerview.setHasFixedSize(true);
-        MyAdapter myAdapter = new MyAdapter(getContext(),applianceArrayList);
+        MyAdapter myAdapter = new MyAdapter(getContext(),applianceArrayList, this);
         recyclerview.setAdapter(myAdapter);
         myAdapter.notifyDataSetChanged();
     }
@@ -112,6 +113,13 @@ public class Home extends Fragment {
             applianceArrayList.add(appliance);
 
         }
+
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(Home.this.getActivity(), MainActivity2.class);
+        startActivity(intent);
 
     }
 }
