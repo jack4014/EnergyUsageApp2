@@ -43,6 +43,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.tvHeading.setText(appliance.heading);
         holder.titleImage.setImageResource(appliance.titleImage);
 
+
+
     }
 
     @Override

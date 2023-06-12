@@ -27,7 +27,7 @@ public class login extends AppCompatActivity {
         });
     }
     public void openHome(){
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(login.this, MainActivity.class);
         startActivity(intent);
     }
 }

@@ -10,4 +10,9 @@ public class Appliance {
         this.titleImage = titleImage;
     }
 
+    public String getHeading() {
+        return heading;
+    }
+    public int getImage() { return titleImage;}
+
 }

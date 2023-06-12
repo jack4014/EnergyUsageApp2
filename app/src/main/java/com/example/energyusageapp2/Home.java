@@ -119,6 +119,11 @@ public class Home extends Fragment implements RecyclerViewInterface {
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(Home.this.getActivity(), MainActivity2.class);
+
+        intent.putExtra("heading", applianceArrayList.get(position).getHeading());
+        intent.putExtra("image", applianceArrayList.get(position).getImage());
+
+
         startActivity(intent);
 
     }
